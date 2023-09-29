@@ -5,6 +5,7 @@ class Inicio extends CI_Controller {
 	
 	public function __construct(){
 		parent::__construct();
+		$this->load->model('LoginModel');
 		$validacion = $this->session->has_userdata("inicio");
 		if ($validacion) {
 			$session = $this->session->userdata("inicio");
@@ -31,13 +32,14 @@ class Inicio extends CI_Controller {
 	}
 
 	public function openListUsers(){
-		$this->load->model('LoginModel');
+		
 		$data["usuarios"] = $this->LoginModel->consultarUsuario();
 		$data['session'] = $this->session->userdata("inicio");
 		$this->load->view('admin/verUsuarios', $data);
 	}
 
 	public function openEditUsers(){
+		$data["usuarios"] = $this->LoginModel->consultarUsuario();
 		$data['session'] = $this->session->userdata("inicio");
 		$this->load->view('admin/editarUsuarios', $data);
 	}
