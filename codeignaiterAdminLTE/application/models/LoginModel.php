@@ -62,6 +62,24 @@ class LoginModel extends CI_Model{
         return $query->result();
     }
 
+	function find($id){
+        $this->db->select();
+        $this->db->from('usuarios');
+        $this->db->where('id', $id);
+
+        $query = $this->db->get();
+        return $query->row();
+    }
 	
-	
+    function update($id, $data){
+        $this->db->where('id', $id);
+        $this->db->update('usuarios', $data);
+
+
+    }
+    function delete($id){
+        $this->db->where('id', $id);
+        $this->db->delete('usuarios');
+
+    }
 }
