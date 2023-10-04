@@ -63,41 +63,30 @@ class Inicio extends CI_Controller {
 	}
 
 	public function guardar($id = null){
-		$Vdata['session'] = $this->session->userdata("inicio");
-		$vdata["id"] = $vdata["cedula"] = $vdata["email"] = $vdata["tipo"] = $vdata["estado"] = "";
-		if (isset($id)) {
-			$usuaio = $this->LoginModel->find($id);
-
-			if (isset($usuario)) {
-				$vdata['session'] = $this->session->userdata("inicio");
-				$vdata["id"] = $usuario->id;
-				$vdata["cedula"] = $usuario->cedula;
-				$vdata["email"] = $usuario->email;
-				$vdata["tipo"] = $usuario->tipo;
-                $vdata["estado"] = $usuario->estado;
-			}
-		}
-        if($this->input->server("REQUEST_METHOD") == "POST"){ 
-
-
-            $data["id"] = $this->input->post("id");
-            $data["cedula"] = $this->input->post("cedula");
-            $data["email"] = $this->input->post("email");
-            $data["tipo"] = $this->input->post("tipo");
-            $data["estado"] = $this->input->post("estado");
-
-
-			$this->LoginModel->update($id, $data);
+		$usuaio = $this->LoginModel->find($id);
+		$vdata['session'] = $this->session->userdata("inicio");
+		$usuaio = $this->LoginModel->find($id);
+		$vdata['usuario'] = $usuaio;
+		$this->load->view('admin/crear', $vdata);
 			
-            
-		}  
-        $this->load->view('admin/crear', $vdata ,$Vdata);	
+	}
+	public function ModificarUsuario($id){
+		
+		$data['cedula'] = $this->input->post('cedula');
+		$data['password'] = $this->input->post('password');
+		$data['email'] = $this->input->post('email');
+		$data['tipo'] = $this->input->post('tipo');
+		$data['estado'] = $this->input->post('estado');
+		$this->LoginModel->update($id, $data);
+		redirect('admin/Inicio/openEditUsers','refresh');
 	}
 	public function borrar($id = null)
 	{
 		$this->LoginModel->delete($id);
-		redirect("/admin/eliminarUsuario");
+		redirect("/admin/Inicio/openDeleteUsers");
 	}
+
+	
 }
 
 /* End of file Inicio.php */

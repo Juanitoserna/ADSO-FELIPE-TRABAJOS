@@ -75,11 +75,12 @@ class LoginModel extends CI_Model{
         $this->db->where('id', $id);
         $this->db->update('usuarios', $data);
 
-
     }
     function delete($id){
         $this->db->where('id', $id);
         $this->db->delete('usuarios');
 
     }
+
+    
 }

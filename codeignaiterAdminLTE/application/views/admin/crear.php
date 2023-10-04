@@ -13,76 +13,29 @@
         <!-- /.card-header -->
         <div class="card-body p-0">
             <div class="container">
-                <?php echo form_open(''); ?>
+                <form action="../ModificarUsuario/<?=$usuario->id?>" method="post"> 
+                    <label for="" class="form-label">Id:</label>
+                    <input type="number" class="form-control" name="" value="<?=$usuario->id?>" readonly>
+                    <label for="" class="form-label">Cedula:</label>
+                    <input type="number" class="form-control" name="cedula" value="<?=$usuario->cedula?>" required>
+                    <label for="" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control" name="email" value="<?=$usuario->email?>" placeholder="example@gmail.com" required>
+                    <label for="" class="form-label">Contraseña:</label>
+                    <input type="text" class="form-control" name="password" value="<?=$usuario->password?>" required>
+                    <label for="" class="form-label">Tipo:</label>
+                    <select class="form-control my-2" name="tipo" id="" value="<?=$usuario->tipo?>">
+                        <option value="ADMIN">ADMIN</option>
+                        <option value="VENDEDOR">VENDEDOR</option>
+                    </select>
+                    <label for="" class="form-label">Estado:</label>
+                    <select name="estado" id="" class="form-control my-2" value="<?=$usuario->estado?>">
+                        <option value="ACTIVO">ACTIVO</option>
+                        <option value="INACTIVO">INACTIVO</option>
+                    </select>
+
+                    <button class="btn btn-outline-primary">Registrar</button>
+                </form>
                 
-                <div class="form-group">
-                    <?php 
-                        echo form_label('Serial', 'serial');
-                        $data = [
-                            'name'      => 'serial',
-                            'type'  => 'number',
-                            'value'     => $id,
-                            'class' => 'form-control input-lg',
-                        ];
-                        echo form_input($data);
-                    ?>
-                </div>
-                <div class="form-group">
-                    <?php 
-                        echo form_label('Nombre', 'nombre');
-                        $data = [
-                            'name'  => 'nombre',
-                            'value' => $cedula,
-                            'class' => 'form-control input-lg',
-                        ];
-        
-                        echo form_input($data);
-                    ?>
-                </div>
-                <div class="form-group">
-                    <?php 
-                        echo form_label('Nombre', 'nombre');
-                        $data = [
-                            'name'  => 'nombre',
-                            'value' => $email,
-                            'class' => 'form-control input-lg',
-                        ];
-        
-                        echo form_input($data);
-                    ?>
-                </div>
-                <div class="form-group">
-                    <?php 
-                        $data = [
-                                'class' => 'form-select',
-                        ];
-                        $options = [
-                            'ADMIN'  => 'ADMIN',
-                            'VENDEDOR'  => 'VENDEDOR',
-                        ];
-                        echo form_label('Estado: ');
-                        echo form_dropdown('estado', $options , 'large',$data);
-                    ?>
-                </div>
-                <div class="form-group">
-                    <?php 
-                        $data = [
-                                'class' => 'form-select',
-                        ];
-                        $options = [
-                            'ACTIVO'  => 'ACTIVO',
-                            'INACTIVO'  => 'INACTIVO',
-                        ];
-                        echo form_label('Estado: ');
-                        echo form_dropdown('estado', $options , 'large',$data);
-                    ?>
-                </div>
-            
-                <?php echo form_submit('mysubmit', 'Enviar', "class='btn btn-primary mt-2'");?>
-                <a href="listado"  class="btn btn-success mt-2">Consultar</a>
-                
-        
-                <?php echo form_close(); ?>
             </div> 
           
         </div>
