@@ -29,6 +29,8 @@ class Login extends CI_Controller {
                 $this->session->set_userdata("inicio",$iniciarSesion);
                 if($datosUsuario->tipo == "ADMIN"){
                     redirect('Usuario','refresh');
+                }else if($datosUsuario->tipo == "VENDEDOR"){
+                    redirect('Vendedor','refresh');
                 }else{
                     redirect('iniciar_session','refresh');
                 }
