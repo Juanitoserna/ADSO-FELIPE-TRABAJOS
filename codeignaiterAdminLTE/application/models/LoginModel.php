@@ -17,7 +17,7 @@ class LoginModel extends CI_Model{
         }
     }
     public function cargarDatos($email){
-        $this->db->select("cedula, tipo, estado");
+        $this->db->select("id ,cedula , password , tipo, estado");
         $this->db->where('email',$email);
         $registros = $this->db->get('usuarios')->result();
         if(sizeof($registros)!=0){

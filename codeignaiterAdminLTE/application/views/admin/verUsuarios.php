@@ -8,26 +8,17 @@
     $this->load->view('layouts/sidebar', $dataSidebar); 
   ?>
   <!-- Content Wrapper. Contains page content -->
+  
+  
   <div class="content-wrapper">
     <div class="col-12 m-0 p-3">
-      <form action="../Inicio/busquedaIndividual" method="POST">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </div>
-        </div>
-
-      </form>
       <div class="card mt-3">
         <!-- /.card-header -->
         <div class="card-body p-0 ">
           <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">DataTable with default features</h3>
-              </div>
+            <div class="card-header">
+              <h3 class="card-title">DataTable with default features</h3>
+            </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">

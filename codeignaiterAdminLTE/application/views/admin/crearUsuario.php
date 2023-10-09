@@ -9,7 +9,7 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <div class="col-12 m-0 p-3">
-
+      
       <div class="row justify-content-center">
         <form class="container-sm" action="<?= base_url('index.php/admin/Usuario/createUser'); ?>" method="POST">
           <div class="card card-primary " style="margin-top: 110px ; ">

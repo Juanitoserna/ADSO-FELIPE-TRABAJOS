@@ -14,7 +14,7 @@
               <img src="<?php  echo base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-              <a href="#" class="d-block">Alexander Pierce</a>
+              <a href="<?php echo base_url('index.php/admin/Inicio/perfilUsuario') ?>" class="d-block">Alexander Pierce</a>
             </div>
           </div>
 
@@ -22,46 +22,38 @@
           <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li class="nav-header">MENU ADMIN</li>
-              <li class="nav-item">
-                <a href="<?= base_url('index.php/admin/Inicio/openCreateUser') ?>" class="nav-link">
-                  <i class="fas fa-plus-square"></i>
-                  <p>
-                    Crear Usuario
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url('index.php/admin/Inicio/openListUsers') ?>" class="nav-link  ">
-                  <i class="fas fa-list"></i>
-                  <p>
-                    Ver Usuarios
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url('index.php/admin/Inicio/openEditUsers') ?>" class="nav-link ">
-                  <i class="fas fa-edit"></i>
-                  <p>
-                    Modificar Usuario
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url('index.php/admin/Inicio/openDeleteUsers') ?>" class="nav-link ">
-                  <i class="fas fa-trash"></i>
-                  <p>
-                    Eliminar Usuario
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= base_url('index.php/Login/cerrarSession') ?>" class="nav-link">
-                  <i class="fas fa-sign-out-alt"></i>
-                  <p>
-                    Cerrar Sesion
-                  </p>
-                </a>
-              </li>
+                <!-- <li class="nav-item">
+                  <a href="<?= base_url('index.php/admin/Inicio/openCreateUser') ?>" class="nav-link">
+                    <i class="fas fa-plus-square"></i>
+                    <p>
+                      Crear Usuario
+                    </p>
+                  </a>
+                </li> -->
+                <!-- <li class="nav-item">
+                  <a href="<?= base_url('index.php/admin/Inicio/openListUsers') ?>" class="nav-link  ">
+                    <i class="fas fa-list"></i>
+                    <p>
+                      Ver Usuarios
+                    </p>
+                  </a>
+                </li> -->
+                <li class="nav-item">
+                  <a href="<?= base_url('index.php/admin/Inicio/openEditUsers') ?>" class="nav-link ">
+                    <i class="fa-solid fa-list"></i>
+                    <p>
+                      Crud Usuario
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="<?= base_url('index.php/Login/cerrarSession') ?>" class="nav-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <p>
+                      Cerrar Sesion
+                    </p>
+                  </a>
+                </li>
 
             </ul>
           </nav>

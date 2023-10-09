@@ -73,7 +73,7 @@ class Inicio extends CI_Controller {
 	public function ModificarUsuario($id){
 		
 		$data['cedula'] = $this->input->post('cedula');
-		$data['password'] = $this->input->post('password');
+		$data['password'] = md5($this->input->post('password'));
 		$data['email'] = $this->input->post('email');
 		$data['tipo'] = $this->input->post('tipo');
 		$data['estado'] = $this->input->post('estado');
@@ -83,7 +83,11 @@ class Inicio extends CI_Controller {
 	public function borrar($id = null)
 	{
 		$this->LoginModel->delete($id);
-		redirect("/admin/Inicio/openDeleteUsers");
+		redirect("/admin/Inicio/openEditUsers");
+	}
+	public function perfilUsuario(){
+		$data['session'] = $this->session->userdata("inicio");
+		$this->load->view('admin/perfil',$data);
 	}
 
 	

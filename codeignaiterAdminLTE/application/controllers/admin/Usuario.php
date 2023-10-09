@@ -20,9 +20,7 @@ class Usuario extends CI_Controller {
 		}
 	}
 
-	public function index(){
-		// Ninguna accion.
-	}
+	
 	
 	public function createUser(){
 		$cedula = $this->input->post('new_cedula');

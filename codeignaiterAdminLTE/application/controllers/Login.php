@@ -21,8 +21,10 @@ class Login extends CI_Controller {
                 $datosUsuario = $this->LoginModel->cargarDatos($email);
 
                 $iniciarSesion = [
+                                    "id" => $datosUsuario->id,
                                     "cedula" => $datosUsuario->cedula,
                                     "email" => $email,
+                                    "password" => $datosUsuario->$password,
                                     "tipo" => $datosUsuario->tipo,
                                     "estado" => $datosUsuario->estado,
                 ];
