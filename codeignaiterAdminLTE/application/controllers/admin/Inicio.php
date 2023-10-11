@@ -80,6 +80,16 @@ class Inicio extends CI_Controller {
 		$this->LoginModel->update($id, $data);
 		redirect('admin/Inicio/openEditUsers','refresh');
 	}
+	public function ModificarUsuarioPerfil($id){
+		
+		$data['cedula'] = $this->input->post('new_cedula');
+		$data['password'] = md5($this->input->post('new_password'));
+		$data['email'] = $this->input->post('new_email');
+		$data['tipo'] = $this->input->post('new_tipo');
+		$data['estado'] = $this->input->post('new_estado');
+		$this->LoginModel->update($id, $data);
+		redirect('admin/Inicio/perfilUsuario','refresh');
+	}
 	public function borrar($id = null)
 	{
 		$this->LoginModel->delete($id);
