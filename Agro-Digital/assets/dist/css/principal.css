@@ -1,0 +1,99 @@
+
+body{
+    background-color: rgba(17, 26, 35, 1);
+ }
+ .banner-image {
+     background-image: url('../img/inicio.png');
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 500px;
+     /* background-attachment: fixed; */
+ }
+ .parrafo{
+     font-size: 20px;
+ }
+ .modal-body{
+     padding: 40px;
+ }
+ 
+ /* Colores oscuros */
+ :root {
+     --background-color: #222;
+     --text-color: #fff;
+ }
+ 
+ /* Estilos para el modo oscuro */
+ .dark-mode {
+     background-color: var(--background-color);
+     color: var(--text-color);
+ }
+ 
+ /*  menu para las item osea los cursos */
+ 
+ /* Estilo personalizado para dividir en columnas de a cuatro */
+ .dropdown-menu.multi-column {
+     columns:4; /* Número de columnas */
+     max-width:850px; /* Ancho máximo del menú desplegable */
+ }
+ 
+ /* Estilo para añadir espacio entre las opciones en el menú desplegable */
+ .dropdown-menu.multi-column a {
+     text-align: center;
+     color: whitesmoke;
+     display: block;
+     border-radius: 10px;
+     background-color: #221B32;
+ }
+ .dropdown-menu.multi-column a:hover{
+     color: greenyellow;
+ }
+ .multi-column li {
+     box-sizing: border-box; /* Incluye el relleno y el borde en el ancho total */
+     margin: 3px 2px 0 6px;
+     border: 1px solid purple;
+    
+     border-radius: 8px;
+ }
+ 
+ .custom-bg{
+     border-radius: 10px;
+     background-color: #221B32;
+ }
+ 
+ .dropdown-menu.multi-column {
+     max-height: 200px; /* Ajusta la altura máxima según sea necesario */
+     overflow-y: auto; /* Añade scroll vertical si es necesario */
+ }
+ 
+ /* Estilo del thumb (barra de desplazamiento) */
+ .dropdown-menu.multi-column::-webkit-scrollbar {
+     width: 8px; /* Ancho del scroll */
+ }
+ 
+ .dropdown-menu.multi-column::-webkit-scrollbar-thumb {
+     background-color: #77095d; /* Color de la barra de desplazamiento */
+     border-radius: 4px; /* Bordes redondeados de la barra de desplazamiento */
+ }
+ 
+ /* Estilo de la pista (track) */
+ .dropdown-menu.multi-column::-webkit-scrollbar-track {
+     background-color: transparent; /* Color del fondo de la pista de la barra de desplazamiento */
+ }
+ 
+ /* Añade scroll solo cuando sea necesario (Firefox) */
+ .dropdown-menu.multi-column {
+     scrollbar-width: thin;
+     scrollbar-color: #77095d; /* Color de la barra de desplazamiento y del fondo de la pista (Firefox) */
+ }
+ 
+ @media(max-width:800px){
+     .dropdown-menu.multi-column {
+         top: 20px;
+         left: 15%;
+         columns: 1;
+        
+     }
+ }
+ 
+   
