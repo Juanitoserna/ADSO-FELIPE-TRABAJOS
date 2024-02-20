@@ -1,0 +1,80 @@
+body{
+    background-color: rgb(201, 201, 201);
+}
+
+#foto_perfil{
+    border-radius: 50%;
+}
+
+#hr{
+    border-top: 1px solid white;
+}
+
+.white-text-with-green-border {
+    color: white; /* Color del texto */
+    text-shadow: 
+        -1px -1px 0 #00FF00,  
+         1px -1px 0 #00FF00,
+        -1px  1px 0 #00FF00,
+         1px  1px 0 #00FF00; /* Bordes verdes */
+    font-size: 19px;
+}
+
+#border_inferior{
+    border-bottom: 1px solid white;
+}
+
+.color_navbar{
+    background-color: #00FF00;
+}
+
+
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+}
+
+/* Estilos para el thead */
+thead {
+    background-color: #00FF00; /* Cambia el color a verde claro */
+}
+
+/* Estilos para el tbody */
+tbody {
+    background-color: white; /* Color de fondo blanco */
+}
+
+/* Estilos para las columnas */
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+/* Redondea los bordes de las celdas de la primera fila */
+th:first-child {
+    border-radius: 5px 0 0 0; /* Redondea la esquina superior izquierda */
+}
+
+th:last-child {
+    border-radius: 0 5px 0 0; /* Redondea la esquina superior derecha */
+}
+
+/* Opcional: Ajustar tamaño de columnas */
+.fecha {
+    width: calc(2/12 * 100%);
+}
+
+.tareas {
+    width: calc(5/12 * 100%);
+}
+
+.estado {
+    width: calc(5/12 * 100%);
+}
+
+/* Asegura que no haya padding horizontal en el contenedor */
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
